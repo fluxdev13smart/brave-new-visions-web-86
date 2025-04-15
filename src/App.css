@@ -1,42 +1,103 @@
+/* Global Styles for Brave New Worlds Digital Poster */
+
+/* Reset root padding for full-width layout */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Offset for fixed header */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Typography enhancements */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.025em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Quote styling */
+blockquote {
+  position: relative;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.7);
 }
 
-.card {
-  padding: 2em;
+blockquote::before {
+  content: '"';
+  position: absolute;
+  left: -20px;
+  top: -10px;
+  font-size: 2em;
+  opacity: 0.5;
 }
 
-.read-the-docs {
-  color: #888;
+/* Link hover effects */
+a {
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  transform: translateY(-2px);
+}
+
+/* Section transitions */
+section {
+  transition: background-color 0.5s ease;
+}
+
+/* Special element styling */
+.shakespeare-quote {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.6;
+}
+
+/* Animation for section reveals */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Word cloud styles */
+.word-cloud-container {
+  position: relative;
+  height: 300px;
+}
+
+.word {
+  position: absolute;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.word:hover {
+  transform: scale(1.2);
+  z-index: 10;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

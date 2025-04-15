@@ -52,6 +52,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				theme: {
+					imagination: "#8B5CF6", // Purple for imagination
+					education: "#F97316", // Orange for education
+					language: "#E5DEFF", // Soft purple for language
+					justice: "#1EAEDB", // Blue for justice
+					fairness: "#33C3F0", // Light blue for fairness
+					dark: "#1A1F2C", // Dark background
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

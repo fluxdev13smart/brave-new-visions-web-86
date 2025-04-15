@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -97,5 +99,67 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-float-delay-1 {
+    animation: float 6s ease-in-out 1s infinite;
+  }
+  
+  .animate-float-delay-2 {
+    animation: float 6s ease-in-out 2s infinite;
+  }
+  
+  .section-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .section-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r;
+  }
+
+  .gradient-imagination {
+    @apply from-theme-imagination to-theme-language;
+  }
+
+  .gradient-education {
+    @apply from-theme-education to-yellow-400;
+  }
+
+  .gradient-justice {
+    @apply from-theme-justice to-theme-fairness;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
