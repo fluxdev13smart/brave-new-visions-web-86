@@ -16,6 +16,12 @@ export const LoadingScreen: React.FC = () => {
           </div>
         </div>
       </div>
+      <div className="lava-lamp mt-4" style={{ height: "80px", width: "30px" }}>
+        <div className="bubble"></div>
+        <div className="bubble1"></div>
+        <div className="bubble2"></div>
+        <div className="bubble3"></div>
+      </div>
       <p className="mt-2 text-md">
         <span className="text-gray-500 mr-1">by</span>
         <span className="text-gray-700 font-semibold">Saeid Mohammad</span>
@@ -27,4 +33,3 @@ export const LoadingScreen: React.FC = () => {
     </div>
   );
 };
-
