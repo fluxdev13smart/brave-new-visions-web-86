@@ -1,115 +1,26 @@
+import React from 'react';
+import { Logo } from './Logo';
 
-import React, { useEffect, useState } from 'react';
-import { FloatingShape } from './FloatingShape';
-
-export const Hero: React.FC = () => {
-  const [scrolled, setScrolled] = useState(false);
-  
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 0);
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-  
+const Hero = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-      {/* Enhanced floating shapes with more variety */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Original shapes */}
-        <div className="absolute top-1/4 left-1/4 animate-glow">
-          <FloatingShape 
-            type="circle" 
-            color="bg-theme-imagination" 
-            size="w-16 h-16"
-            opacity="opacity-20"
-          />
-        </div>
-        <div className="absolute bottom-1/3 right-1/4">
-          <FloatingShape 
-            type="square" 
-            color="bg-theme-education" 
-            size="w-12 h-12"
-            delayClass="animate-float-delay-1"
-            opacity="opacity-15"
-          />
-        </div>
-        
-        {/* New additional shapes */}
-        <div className="absolute top-1/2 right-1/3">
-          <FloatingShape 
-            type="hexagon" 
-            color="bg-theme-justice" 
-            size="40"
-            delayClass="animate-float-delay-2"
-            opacity="opacity-10"
-          />
-        </div>
-        <div className="absolute bottom-1/4 left-1/5">
-          <FloatingShape 
-            type="cross" 
-            color="bg-theme-imagination" 
-            size="w-8 h-8"
-            delayClass="animate-float-delay-1"
-            opacity="opacity-20"
-          />
-        </div>
-        <div className="absolute top-1/3 left-2/3">
-          <FloatingShape 
-            type="triangle" 
-            color="bg-theme-education" 
-            size="30px"
-            opacity="opacity-15"
-          />
-        </div>
-        <div className="absolute bottom-1/2 right-1/5">
-          <FloatingShape 
-            type="star" 
-            color="bg-theme-justice" 
-            size="35"
-            delayClass="animate-float-delay-2"
-            opacity="opacity-25"
-          />
-        </div>
-      </div>
-      
-      <div className="text-center z-10 px-6 max-w-4xl">
-        <h1 className={`text-6xl md:text-8xl font-bold mb-4 transition-all duration-700 ${
-          scrolled ? 'opacity-50 scale-90' : 'opacity-100 scale-100'
-        }`}>
-          <span className="gradient-text gradient-imagination animate-reveal" style={{ animationDelay: '0.2s' }}>Brave</span>{' '}
-          <span className="gradient-text gradient-education animate-reveal" style={{ animationDelay: '0.4s' }}>New</span>{' '}
-          <span className="gradient-text gradient-justice animate-reveal" style={{ animationDelay: '0.6s' }}>Worlds</span>
+    <div className="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden">
+      <div className="container mx-auto px-4 relative z-10">
+        <Logo className="mb-4 justify-center" /> {/* Added Logo component */}
+        <h1 className="text-6xl md:text-8xl font-bold mb-4">
+          Brave <span className="gradient-text gradient-education animate-reveal">New</span> Worlds
         </h1>
-        
-        <p className={`text-xl md:text-2xl mb-8 transition-all duration-500 animate-slide-up ${
-          scrolled ? 'opacity-0' : 'opacity-100'
-        }`} style={{ animationDelay: '0.8s' }}>
-          An interactive journey through imagination, education, language, justice, and fairness
+        <p className="text-lg md:text-xl mb-8">
+          Exploring the intersection of imagination, education, language, and justice through the lens of literature.
         </p>
-        
-        <div className={`transition-all duration-700 animate-slide-up ${
-          scrolled ? 'opacity-0' : 'opacity-100'
-        }`} style={{ animationDelay: '1s' }}>
-          <a 
-            href="#imagination" 
-            className="inline-block px-6 py-3 bg-theme-imagination text-white rounded-full text-lg font-medium hover:shadow-lg transition transform hover:-translate-y-1 hover:scale-105"
-          >
-            Begin the Journey
-          </a>
-        </div>
-      </div>
-      
-      <div className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 transition-opacity duration-300 ${
-        scrolled ? 'opacity-0' : 'opacity-100 animate-glow'
-      }`}>
-        <div className="w-8 h-12 border-2 border-gray-600 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-gray-600 rounded-full mt-2 animate-bounce" />
-        </div>
-        <p className="text-center mt-2 text-sm text-gray-600">Scroll to explore</p>
+        <a
+          href="#imagination"
+          className="bg-theme-education text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-colors"
+        >
+          Explore
+        </a>
       </div>
     </div>
   );
 };
+
+export default Hero;

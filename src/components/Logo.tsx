@@ -2,9 +2,13 @@
 import React from 'react';
 import { BookOpenCheck } from 'lucide-react';
 
-export const Logo: React.FC = () => {
+interface LogoProps {
+  className?: string;
+}
+
+export const Logo: React.FC<LogoProps> = ({ className = '' }) => {
   return (
-    <div className="flex items-center gap-2">
+    <div className={`flex items-center gap-2 ${className}`}>
       <div className="relative">
         <BookOpenCheck className="w-6 h-6 text-theme-imagination animate-float" />
       </div>
