@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import { Header } from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -7,6 +6,7 @@ import { UnGoals } from "@/components/UnGoals";
 import { WordCloud } from "@/components/WordCloud";
 import { ShakespeareInfluence } from "@/components/ShakespeareInfluence";
 import { Footer } from "@/components/Footer";
+import { AnimatedCornerButton } from "@/components/AnimatedCornerButton";
 
 const Index = () => {
   useEffect(() => {
@@ -147,6 +147,7 @@ const Index = () => {
       </section>
       
       <Footer />
+      <AnimatedCornerButton />
     </div>
   );
 };
