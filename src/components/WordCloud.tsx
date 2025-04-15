@@ -39,12 +39,10 @@ export const WordCloud: React.FC<WordCloudProps> = ({
                 hoveredWord && !isHovered ? 'opacity-40' : 'opacity-100'
               )}
               style={{
-                left: `${15 + (index % 4) * 25}%`,
-                top: `${15 + Math.floor(index / 4) * 25}%`,
+                left: `${20 + (index % 5) * 17}%`,
+                top: `${10 + (index * 13) % 60}%`,
                 transform: isHovered ? 'scale(1.25)' : 'scale(1)',
                 transitionDelay: `${word.delay}ms`,
-                whiteSpace: 'nowrap',
-                overflow: 'visible',
               }}
               onMouseEnter={() => setHoveredWord(word.text)}
               onMouseLeave={() => setHoveredWord(null)}

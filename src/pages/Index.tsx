@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import { Header } from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -24,6 +23,7 @@ const Index = () => {
     { text: "Create", size: "text-3xl", color: "text-theme-imagination", delay: 200 },
     { text: "Innovate", size: "text-xl", color: "text-purple-600", delay: 300 },
     { text: "Wonder", size: "text-2xl", color: "text-purple-400", delay: 150 },
+    { text: "Vision", size: "text-3xl", color: "text-theme-imagination", delay: 250 },
     { text: "Explore", size: "text-xl", color: "text-indigo-500", delay: 350 },
     { text: "Invent", size: "text-2xl", color: "text-purple-500", delay: 180 },
     { text: "Discover", size: "text-xl", color: "text-indigo-600", delay: 220 },
@@ -34,6 +34,7 @@ const Index = () => {
     { text: "Growth", size: "text-2xl", color: "text-theme-education", delay: 150 },
     { text: "Learning", size: "text-3xl", color: "text-orange-500", delay: 200 },
     { text: "Insight", size: "text-xl", color: "text-orange-600", delay: 250 },
+    { text: "Wisdom", size: "text-2xl", color: "text-theme-education", delay: 300 },
     { text: "Understanding", size: "text-xl", color: "text-yellow-600", delay: 350 },
     { text: "Development", size: "text-2xl", color: "text-orange-400", delay: 400 },
     { text: "Enlightenment", size: "text-xl", color: "text-yellow-500", delay: 450 },
@@ -44,6 +45,7 @@ const Index = () => {
     { text: "Communication", size: "text-xl", color: "text-gray-600", delay: 150 },
     { text: "Expression", size: "text-3xl", color: "text-gray-800", delay: 200 },
     { text: "Dialogue", size: "text-2xl", color: "text-gray-700", delay: 250 },
+    { text: "Stories", size: "text-3xl", color: "text-gray-900", delay: 300 },
     { text: "Connection", size: "text-xl", color: "text-gray-600", delay: 350 },
     { text: "Poetry", size: "text-2xl", color: "text-gray-800", delay: 400 },
     { text: "Literature", size: "text-xl", color: "text-gray-700", delay: 450 },
@@ -54,7 +56,8 @@ const Index = () => {
     { text: "Fairness", size: "text-2xl", color: "text-theme-fairness", delay: 150 },
     { text: "Rights", size: "text-xl", color: "text-theme-justice", delay: 200 },
     { text: "Balance", size: "text-2xl", color: "text-blue-500", delay: 250 },
-    { text: "Empathy", size: "text-xl", color: "text-blue-600", delay: 350 },
+    { text: "Inclusion", size: "text-3xl", color: "text-theme-fairness", delay: 300 },
+    { text: "Harmony", size: "text-xl", color: "text-blue-600", delay: 350 },
     { text: "Truth", size: "text-2xl", color: "text-theme-justice", delay: 400 },
     { text: "Peace", size: "text-xl", color: "text-blue-400", delay: 450 },
   ];
@@ -64,7 +67,7 @@ const Index = () => {
       <Header />
       <Hero />
       
-      <section id="imagination" className="opacity-100 section-visible">
+      <section id="imagination" className="section-visible">
         <ThemeSection
           title="Imagination"
           subtitle="The Power of"
@@ -80,7 +83,7 @@ const Index = () => {
         </ThemeSection>
       </section>
       
-      <section id="education" className="opacity-100 section-visible">
+      <section id="education" className="section-visible">
         <ThemeSection
           title="Education"
           subtitle="Words for"
@@ -97,7 +100,7 @@ const Index = () => {
         </ThemeSection>
       </section>
       
-      <section id="language" className="opacity-100 section-visible">
+      <section id="language" className="section-visible">
         <ThemeSection
           title="Language"
           subtitle="Voices for"
@@ -113,7 +116,7 @@ const Index = () => {
         </ThemeSection>
       </section>
       
-      <section id="justice" className="opacity-100 section-visible">
+      <section id="justice" className="section-visible">
         <ThemeSection
           title="Justice & Fairness"
           subtitle="The Foundation of"
@@ -130,11 +133,11 @@ const Index = () => {
         </ThemeSection>
       </section>
       
-      <section id="shakespeare" className="opacity-100 section-visible">
+      <section id="shakespeare" className="section-visible">
         <ShakespeareInfluence />
       </section>
 
-      <section id="goals" className="opacity-100 section-visible">
+      <section id="goals" className="section-visible">
         <UnGoals />
       </section>
       
