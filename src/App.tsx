@@ -22,7 +22,7 @@ const App = () => {
         setShowLoader(false);
       }, 500); // Match the duration-500 from the transition
       return () => clearTimeout(fadeTimer);
-    }, 4000); // Changed from 2000 to 4000 for 4 seconds
+    }, 6000); // Changed from 4000 to 6000 for 6 seconds
 
     return () => clearTimeout(timer);
   }, []);
@@ -45,3 +45,4 @@ const App = () => {
 };
 
 export default App;
+

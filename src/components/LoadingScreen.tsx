@@ -11,6 +11,15 @@ export const LoadingScreen: React.FC = () => {
         <div className="bubble3"></div>
       </div>
       <p className="mt-4 text-xl font-medium animate-pulse">loading...</p>
+      <p className="mt-2 text-md">
+        <span className="text-gray-500 mr-1">by</span>
+        <span className="text-gray-700 font-semibold">Saeid Mohammad</span>
+      </p>
+      <p className="mt-2 text-sm text-gray-600 text-center max-w-xs">
+        The loading screen will complete within 6 seconds. 
+        If it takes longer, please refresh the page.
+      </p>
     </div>
   );
 };
+
