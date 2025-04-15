@@ -36,6 +36,7 @@ export const ThemeSection: React.FC<ThemeSectionProps> = ({
 }) => {
   return (
     <ScrollObserver className={cn("min-h-screen relative overflow-hidden flex flex-col items-center justify-center px-6 py-20", className)}>
+      {/* Original shapes */}
       <div className="absolute -right-12 top-20">
         <FloatingShape 
           type="circle" 
@@ -51,6 +52,47 @@ export const ThemeSection: React.FC<ThemeSectionProps> = ({
           color={`bg-${shapeColor}`} 
           size="w-20 h-20" 
           delayClass="animate-float-delay-2"
+        />
+      </div>
+
+      {/* Additional floating shapes */}
+      <div className="absolute top-1/4 right-1/4">
+        <FloatingShape 
+          type="hexagon" 
+          color={`bg-${shapeColor}`} 
+          size="w-32 h-32" 
+          delayClass="animate-float"
+          opacity="opacity-10"
+        />
+      </div>
+
+      <div className="absolute bottom-1/4 left-1/3">
+        <FloatingShape 
+          type="triangle" 
+          color={`bg-${shapeColor}`} 
+          size="80" 
+          delayClass="animate-float-delay-3"
+          opacity="opacity-10"
+        />
+      </div>
+
+      <div className="absolute top-1/3 right-1/3">
+        <FloatingShape 
+          type="circle" 
+          color={`bg-${shapeColor}`} 
+          size="w-24 h-24" 
+          delayClass="animate-float-delay-2"
+          opacity="opacity-10"
+        />
+      </div>
+
+      <div className="absolute bottom-20 right-1/4">
+        <FloatingShape 
+          type="cross" 
+          color={`bg-${shapeColor}`} 
+          size="w-16 h-16" 
+          delayClass="animate-float-delay-1"
+          opacity="opacity-10"
         />
       </div>
       
@@ -86,3 +128,4 @@ export const ThemeSection: React.FC<ThemeSectionProps> = ({
     </ScrollObserver>
   );
 };
+
