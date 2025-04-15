@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -53,12 +54,12 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				theme: {
-					imagination: "#8B5CF6", // Purple for imagination
-					education: "#F97316", // Orange for education
-					language: "#E5DEFF", // Soft purple for language
-					justice: "#1EAEDB", // Blue for justice
-					fairness: "#33C3F0", // Light blue for fairness
-					dark: "#1A1F2C", // Dark background
+					imagination: "#9b87f5", // Updated purple for imagination
+					education: "#FF8E3C", // Updated warmer orange for education
+					language: "#FDE1D3", // Updated soft peach for language
+					justice: "#33C3F0", // Kept blue for justice 
+					fairness: "#0EA5E9", // Updated light blue for fairness
+					dark: "#403E43", // Updated dark background
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -97,6 +98,10 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
 			}
 		}
 	},

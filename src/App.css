@@ -15,6 +15,51 @@ html {
   scroll-padding-top: 80px; /* Offset for fixed header */
 }
 
+/* Background orbs */
+.background-orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.orb-1 {
+  width: 300px;
+  height: 300px;
+  background: rgba(155, 135, 245, 0.3);
+  top: 10%;
+  left: 10%;
+  animation: float 20s ease-in-out infinite alternate;
+}
+
+.orb-2 {
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 142, 60, 0.2);
+  bottom: 10%;
+  right: 5%;
+  animation: float 25s ease-in-out infinite alternate-reverse;
+}
+
+.orb-3 {
+  width: 200px;
+  height: 200px;
+  background: rgba(51, 195, 240, 0.25);
+  top: 40%;
+  right: 20%;
+  animation: float 18s ease-in-out infinite alternate;
+}
+
+.orb-4 {
+  width: 350px;
+  height: 350px;
+  background: rgba(254, 100, 121, 0.15);
+  bottom: 30%;
+  left: 20%;
+  animation: float 22s ease-in-out infinite alternate-reverse;
+}
+
 /* Typography enhancements */
 h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.025em;
@@ -25,35 +70,74 @@ blockquote {
   position: relative;
   font-style: italic;
   color: rgba(0, 0, 0, 0.7);
+  background: linear-gradient(to right, rgba(251, 221, 186, 0.2), rgba(254, 100, 121, 0.2));
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
 }
 
 blockquote::before {
   content: '"';
   position: absolute;
-  left: -20px;
+  left: -5px;
   top: -10px;
-  font-size: 2em;
-  opacity: 0.5;
+  font-size: 3em;
+  opacity: 0.3;
+  color: var(--theme-education);
 }
 
 /* Link hover effects */
 a {
   transition: all 0.3s ease;
+  position: relative;
 }
 
 a:hover {
   transform: translateY(-2px);
 }
 
+a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(to right, var(--theme-education), var(--theme-imagination));
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
 /* Section transitions */
 section {
   transition: background-color 0.5s ease;
+  position: relative;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/section-pattern.png');
+  background-size: 300px;
+  background-repeat: repeat;
+  opacity: 0.03;
+  z-index: 0;
+  pointer-events: none;
 }
 
 /* Special element styling */
 .shakespeare-quote {
   font-family: 'Playfair Display', serif;
   line-height: 1.6;
+  position: relative;
+  z-index: 1;
 }
 
 /* Animation for section reveals */
@@ -72,17 +156,20 @@ section {
 .word-cloud-container {
   position: relative;
   height: 300px;
+  perspective: 1000px;
 }
 
 .word {
   position: absolute;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   cursor: pointer;
+  backface-visibility: hidden;
 }
 
 .word:hover {
-  transform: scale(1.2);
+  transform: scale(1.3) rotate(5deg);
   z-index: 10;
+  text-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 /* Custom scrollbar */
@@ -92,15 +179,16 @@ section {
 
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
+  border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #843e94;
+  background: linear-gradient(to bottom, var(--theme-education), var(--theme-imagination));
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #F97316;
+  background: var(--theme-justice);
 }
 
 /* Glowing text effect */
@@ -116,6 +204,7 @@ section {
   backdrop-filter: blur(10px);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Page transition effect */
@@ -126,4 +215,16 @@ section {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(20px, -20px) rotate(5deg);
+  }
+  100% {
+    transform: translate(-20px, 20px) rotate(-5deg);
+  }
 }

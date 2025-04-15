@@ -31,6 +31,13 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         {showLoader && <div className={`transition-opacity duration-500 ${loading ? 'opacity-100' : 'opacity-0'}`}><LoadingScreen /></div>}
+        
+        {/* Background orbs */}
+        <div className="background-orb orb-1"></div>
+        <div className="background-orb orb-2"></div>
+        <div className="background-orb orb-3"></div>
+        <div className="background-orb orb-4"></div>
+        
         <Toaster />
         <Sonner />
         <BrowserRouter>
@@ -45,4 +52,3 @@ const App = () => {
 };
 
 export default App;
-
