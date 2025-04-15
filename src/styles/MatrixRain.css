@@ -1,9 +1,4 @@
 
-/* From Uiverse.io by SelfMadeSystem */
-/*
-More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
- */
-
 .matrix-rain {
   position: fixed;
   top: 0;
@@ -12,7 +7,8 @@ More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
   height: 100%;
   z-index: -5;
   background: #ffffff;
-  background-image: radial-gradient(4px 100px at 0px 235px, #D6BCFA, #0000),
+  background-image: 
+    radial-gradient(4px 100px at 0px 235px, #D6BCFA, #0000),
     radial-gradient(4px 100px at 300px 235px, #D6BCFA, #0000),
     radial-gradient(1.5px 1.5px at 150px 117.5px, #D6BCFA 100%, #0000 150%),
     radial-gradient(4px 100px at 0px 252px, #D6BCFA, #0000),
@@ -87,6 +83,7 @@ More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
     300px 210px;
   animation: matrix-rain 150s linear infinite;
   filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.9); /* Added a semi-transparent white background */
 }
 
 @keyframes matrix-rain {
