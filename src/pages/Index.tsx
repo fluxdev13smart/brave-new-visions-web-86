@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import { Header } from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -53,7 +54,7 @@ const Index = () => {
     { text: "Fairness", size: "text-2xl", color: "text-theme-fairness", delay: 150 },
     { text: "Rights", size: "text-xl", color: "text-theme-justice", delay: 200 },
     { text: "Balance", size: "text-2xl", color: "text-blue-500", delay: 250 },
-    { text: "Harmony", size: "text-xl", color: "text-blue-600", delay: 350 },
+    { text: "Empathy", size: "text-xl", color: "text-blue-600", delay: 350 },
     { text: "Truth", size: "text-2xl", color: "text-theme-justice", delay: 400 },
     { text: "Peace", size: "text-xl", color: "text-blue-400", delay: 450 },
   ];
