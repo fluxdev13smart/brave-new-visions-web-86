@@ -1,9 +1,7 @@
 import React from 'react';
 export const LoadingScreen: React.FC = () => {
   return <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white/80 dark:bg-gray-900/80 backdrop-blur-md transition-opacity duration-500">
-      <div className="card">
-        
-      </div>
+      
       <div className="lava-lamp mt-4" style={{
       height: "80px",
       width: "30px"
