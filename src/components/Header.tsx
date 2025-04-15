@@ -1,6 +1,6 @@
-
 import React, { useEffect, useState } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { Logo } from './Logo';
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,9 +33,7 @@ export const Header: React.FC = () => {
       isScrolled ? 'bg-white/90 dark:bg-theme-dark/90 shadow-md py-3' : 'py-5'
     }`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <div className="text-xl font-bold gradient-text gradient-imagination">
-          Brave New Worlds
-        </div>
+        <Logo />
         
         {isMobile ? (
           <>
