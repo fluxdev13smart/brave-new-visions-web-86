@@ -2,15 +2,9 @@
 import React from 'react';
 
 export const AnimatedCornerButton = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
-    <button
-      onClick={scrollToTop}
-      className="fixed bottom-8 right-8 z-50 shadow-[hsl(210deg_87%_36%)_0px_7px_0px_0px] bg-[#9b87f5] hover:shadow-none active:shadow-none active:translate-y-[7px] transition-all duration-[31ms] cubic-bezier(.5,.7,.4,1) rounded-2xl"
-      aria-label="Scroll to top"
+    <div
+      className="fixed bottom-8 right-8 z-50 bg-[#9b87f5] rounded-2xl px-4 py-2 transition-all duration-300 hover:shadow-lg"
     >
       <i>b</i>
       <i>y</i>
@@ -29,6 +23,7 @@ export const AnimatedCornerButton = () => {
       <i>m</i>
       <i>a</i>
       <i>d</i>
-    </button>
+    </div>
   );
 };
+
