@@ -43,6 +43,8 @@ export const WordCloud: React.FC<WordCloudProps> = ({
                 top: `${10 + (index * 13) % 60}%`,
                 transform: isHovered ? 'scale(1.25)' : 'scale(1)',
                 transitionDelay: `${word.delay}ms`,
+                whiteSpace: 'nowrap', // Prevent text wrapping
+                overflow: 'visible', // Ensure full text is visible
               }}
               onMouseEnter={() => setHoveredWord(word.text)}
               onMouseLeave={() => setHoveredWord(null)}
