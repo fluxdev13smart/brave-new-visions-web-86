@@ -16,37 +16,61 @@ export const Hero: React.FC = () => {
   
   return (
     <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-      {/* Enhanced animated shapes with more variety */}
+      {/* Enhanced floating shapes with more variety */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Original shapes */}
         <div className="absolute top-1/4 left-1/4 animate-glow">
           <FloatingShape 
             type="circle" 
             color="bg-theme-imagination" 
-            size="w-16 h-16" 
+            size="w-16 h-16"
+            opacity="opacity-20"
           />
         </div>
         <div className="absolute bottom-1/3 right-1/4">
           <FloatingShape 
             type="square" 
             color="bg-theme-education" 
-            size="w-12 h-12" 
+            size="w-12 h-12"
             delayClass="animate-float-delay-1"
+            opacity="opacity-15"
           />
         </div>
-        <div className="absolute top-1/3 right-1/5">
+        
+        {/* New additional shapes */}
+        <div className="absolute top-1/2 right-1/3">
+          <FloatingShape 
+            type="hexagon" 
+            color="bg-theme-justice" 
+            size="40"
+            delayClass="animate-float-delay-2"
+            opacity="opacity-10"
+          />
+        </div>
+        <div className="absolute bottom-1/4 left-1/5">
+          <FloatingShape 
+            type="cross" 
+            color="bg-theme-imagination" 
+            size="w-8 h-8"
+            delayClass="animate-float-delay-1"
+            opacity="opacity-20"
+          />
+        </div>
+        <div className="absolute top-1/3 left-2/3">
           <FloatingShape 
             type="triangle" 
-            color="bg-theme-justice" 
-            size="50px" 
-            delayClass="animate-float-delay-2"
+            color="bg-theme-education" 
+            size="30px"
+            opacity="opacity-15"
           />
         </div>
-        <div className="absolute bottom-1/4 left-1/3">
+        <div className="absolute bottom-1/2 right-1/5">
           <FloatingShape 
             type="star" 
-            color="bg-theme-imagination" 
-            size="40px"
-            delayClass="animate-float-delay-1"
+            color="bg-theme-justice" 
+            size="35"
+            delayClass="animate-float-delay-2"
+            opacity="opacity-25"
           />
         </div>
       </div>
