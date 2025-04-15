@@ -13,11 +13,15 @@ const queryClient = new QueryClient();
 
 const App = () => {
   const [loading, setLoading] = useState(true);
+  const [showLoader, setShowLoader] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time
     const timer = setTimeout(() => {
       setLoading(false);
+      const fadeTimer = setTimeout(() => {
+        setShowLoader(false);
+      }, 500); // Match the duration-500 from the transition
+      return () => clearTimeout(fadeTimer);
     }, 2000);
 
     return () => clearTimeout(timer);
@@ -26,7 +30,7 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        {loading && <LoadingScreen />}
+        {showLoader && <div className={`${loading ? 'opacity-100' : 'opacity-0'}`}><LoadingScreen /></div>}
         <Toaster />
         <Sonner />
         <BrowserRouter>
