@@ -5,7 +5,7 @@ export const AnimatedCornerButton = () => {
   return (
     <div
       className="fixed bottom-8 right-8 z-50 bg-[#9b87f5] text-white rounded-2xl px-4 py-2 
-      transition-all duration-300 hover:shadow-lg shadow-md animate-float font-playfair"
+      transition-all duration-300 hover:shadow-xl shadow-lg dark:shadow-2xl animate-float font-playfair"
     >
       <i>b</i>
       <i>y</i>
