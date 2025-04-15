@@ -22,7 +22,7 @@ const App = () => {
         setShowLoader(false);
       }, 500); // Match the duration-500 from the transition
       return () => clearTimeout(fadeTimer);
-    }, 2000);
+    }, 4000); // Changed from 2000 to 4000 for 4 seconds
 
     return () => clearTimeout(timer);
   }, []);
@@ -30,7 +30,7 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        {showLoader && <div className={`${loading ? 'opacity-100' : 'opacity-0'}`}><LoadingScreen /></div>}
+        {showLoader && <div className={`transition-opacity duration-500 ${loading ? 'opacity-100' : 'opacity-0'}`}><LoadingScreen /></div>}
         <Toaster />
         <Sonner />
         <BrowserRouter>
