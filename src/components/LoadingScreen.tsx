@@ -3,7 +3,7 @@ import React from 'react';
 
 export const LoadingScreen: React.FC = () => {
   return (
-    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white/80 dark:bg-gray-900/80 backdrop-blur-md transition-opacity duration-500">
+    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white/80 dark:bg-gray-900/80 backdrop-blur-md transition-opacity duration-500 custom-cursor-zone">
       <div className="lava-lamp mb-4" style={{ background: '#843e94' }}>
         <div className="bubble"></div>
         <div className="bubble1"></div>

@@ -6,6 +6,9 @@ import { FloatingShape } from './FloatingShape';
 const Hero = () => {
   return (
     <div className="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden">
+      {/* Background blur effect */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white/20 to-theme-language/30 dark:from-theme-dark/30 dark:to-theme-imagination/20 backdrop-blur-[2px]"></div>
+      
       {/* Additional floating shapes with blur effect */}
       <div className="absolute top-20 left-10 animate-float-delay-1">
         <FloatingShape type="circle" color="bg-purple-300" size="w-24 h-24" opacity="opacity-20" />
@@ -30,6 +33,27 @@ const Hero = () => {
       <div className="absolute bottom-1/3 left-1/4 animate-float">
         <FloatingShape type="cross" color="bg-theme-education" size="w-16 h-16" opacity="opacity-15" />
       </div>
+      
+      {/* New floating shapes for more density */}
+      <div className="absolute top-2/3 right-1/3 animate-float-delay-3">
+        <FloatingShape type="circle" color="bg-theme-fairness" size="w-20 h-20" opacity="opacity-15" />
+      </div>
+      
+      <div className="absolute top-1/4 left-1/3 animate-float-delay-2">
+        <FloatingShape type="star" color="bg-orange-300" size="35" opacity="opacity-25" />
+      </div>
+      
+      <div className="absolute bottom-1/4 right-1/3 animate-float-delay-1">
+        <FloatingShape type="triangle" color="#1EAEDB" size="45" opacity="opacity-20" />
+      </div>
+      
+      <div className="absolute top-1/2 left-40 animate-float-delay-3">
+        <FloatingShape type="hexagon" color="bg-yellow-300" size="40" opacity="opacity-15" />
+      </div>
+      
+      <div className="absolute bottom-40 left-1/3 animate-float">
+        <FloatingShape type="square" color="bg-theme-justice" size="w-16 h-16" opacity="opacity-20" />
+      </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <Logo className="mb-4 justify-center" />
@@ -41,7 +65,7 @@ const Hero = () => {
         </p>
         <a
           href="#imagination"
-          className="bg-theme-education text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-colors"
+          className="bg-theme-education text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-colors animate-pulse-slow"
         >
           Explore
         </a>

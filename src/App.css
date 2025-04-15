@@ -1,3 +1,4 @@
+
 /* Global Styles for Brave New Worlds Digital Poster */
 
 /* Reset root padding for full-width layout */
@@ -94,10 +95,35 @@ section {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #843e94;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #F97316;
+}
+
+/* Glowing text effect */
+.glow-text {
+  text-shadow: 0 0 5px rgba(139, 92, 246, 0.5),
+               0 0 10px rgba(139, 92, 246, 0.3),
+               0 0 15px rgba(139, 92, 246, 0.2);
+}
+
+/* Glassmorphism effect */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Page transition effect */
+.page-transition {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
