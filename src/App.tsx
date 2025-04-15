@@ -8,6 +8,7 @@ import { LoadingScreen } from "@/components/LoadingScreen";
 import { useState, useEffect } from "react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import "./styles/MatrixRain.css";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,9 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         {showLoader && <div className={`transition-opacity duration-500 ${loading ? 'opacity-100' : 'opacity-0'}`}><LoadingScreen /></div>}
+        
+        {/* Matrix rain background */}
+        <div className="matrix-rain"></div>
         
         {/* Background orbs */}
         <div className="background-orb orb-1"></div>

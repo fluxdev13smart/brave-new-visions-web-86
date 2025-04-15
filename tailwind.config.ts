@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -54,11 +53,11 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				theme: {
-					imagination: "#9b87f5", // Updated purple for imagination
-					education: "#FF8E3C", // Updated warmer orange for education
-					language: "#FDE1D3", // Updated soft peach for language
-					justice: "#33C3F0", // Kept blue for justice 
-					fairness: "#0EA5E9", // Updated light blue for fairness
+					imagination: "#a282fd", // Updated to a brighter purple
+					education: "#FF8E3C", // Kept the warm orange
+					language: "#E5DEFF", // Updated to a soft lavender
+					justice: "#33C3F0", // Kept blue for justice
+					fairness: "#0EA5E9", // Kept light blue for fairness
 					dark: "#403E43", // Updated dark background
 				},
 				sidebar: {
