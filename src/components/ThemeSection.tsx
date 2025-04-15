@@ -3,6 +3,7 @@ import React from 'react';
 import { ScrollObserver } from './ScrollObserver';
 import { FloatingShape } from './FloatingShape';
 import { cn } from '@/lib/utils';
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 interface ThemeSectionProps {
   title: string;
@@ -16,6 +17,7 @@ interface ThemeSectionProps {
   children?: React.ReactNode;
   className?: string;
   shapeColor: string;
+  imageUrl?: string;
 }
 
 export const ThemeSection: React.FC<ThemeSectionProps> = ({
@@ -30,6 +32,7 @@ export const ThemeSection: React.FC<ThemeSectionProps> = ({
   children,
   className = "",
   shapeColor,
+  imageUrl
 }) => {
   return (
     <ScrollObserver className={cn("min-h-screen relative overflow-hidden flex flex-col items-center justify-center px-6 py-20", className)}>
@@ -41,6 +44,7 @@ export const ThemeSection: React.FC<ThemeSectionProps> = ({
           delayClass="animate-float-delay-1"
         />
       </div>
+      
       <div className="absolute -left-8 bottom-40">
         <FloatingShape 
           type="square" 
@@ -52,9 +56,21 @@ export const ThemeSection: React.FC<ThemeSectionProps> = ({
       
       <div className="text-9xl font-bold absolute top-10 right-10 opacity-10">{number}</div>
       
-      <div className="max-w-3xl mx-auto text-center z-10">
+      <div className="max-w-4xl mx-auto text-center z-10">
         <h2 className={`text-sm uppercase tracking-wider mb-2 ${color}`}>{subtitle}</h2>
         <h1 className={`text-5xl md:text-6xl font-bold mb-6 gradient-text ${gradientClass}`}>{title}</h1>
+        
+        {imageUrl && (
+          <div className="w-full max-w-2xl mx-auto mb-8 rounded-lg overflow-hidden shadow-lg">
+            <AspectRatio ratio={16/9} className="bg-muted">
+              <img
+                src={imageUrl}
+                alt={`${title} illustration`}
+                className="object-cover w-full h-full rounded-lg"
+              />
+            </AspectRatio>
+          </div>
+        )}
         
         <p className="text-lg mb-8 leading-relaxed">{description}</p>
         

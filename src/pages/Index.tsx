@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import { Header } from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -78,6 +79,7 @@ const Index = () => {
           quote="We are such stuff as dreams are made on, and our little life is rounded with a sleep."
           quoteAuthor="William Shakespeare, The Tempest"
           shapeColor="theme-imagination"
+          imageUrl="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb"
         >
           <WordCloud title="The Language of Imagination" words={imaginationWords} />
         </ThemeSection>
@@ -95,6 +97,7 @@ const Index = () => {
           quoteAuthor="Anonymous"
           className="bg-gray-50 dark:bg-gray-800"
           shapeColor="theme-education"
+          imageUrl="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb"
         >
           <WordCloud title="The Language of Education" words={educationWords} />
         </ThemeSection>
@@ -111,6 +114,7 @@ const Index = () => {
           quote="But words are things, and a small drop of ink, falling like dew, upon a thought, produces that which makes thousands, perhaps millions, think."
           quoteAuthor="Lord Byron"
           shapeColor="gray-400"
+          imageUrl="https://images.unsplash.com/photo-1433086966358-54859d0ed716"
         >
           <WordCloud title="The Power of Words" words={languageWords} />
         </ThemeSection>
@@ -128,6 +132,7 @@ const Index = () => {
           quoteAuthor="William Shakespeare, The Merchant of Venice"
           className="bg-gray-50 dark:bg-gray-800"
           shapeColor="theme-justice"
+          imageUrl="https://images.unsplash.com/photo-1500375592092-40eb2168fd21"
         >
           <WordCloud title="The Language of Justice" words={justiceWords} />
         </ThemeSection>
