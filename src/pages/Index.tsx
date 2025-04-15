@@ -1,7 +1,6 @@
-
 import React, { useEffect } from "react";
 import { Header } from "@/components/Header";
-import Hero from "@/components/Hero"; // Changed from { Hero } to Hero
+import Hero from "@/components/Hero";
 import { ThemeSection } from "@/components/ThemeSection";
 import { UnGoals } from "@/components/UnGoals";
 import { WordCloud } from "@/components/WordCloud";
@@ -10,8 +9,12 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   useEffect(() => {
-    // Scroll to top on component mount
+    // Scroll to top on component mount and add section-visible class to all sections
     window.scrollTo(0, 0);
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+      section.classList.add('section-visible');
+    });
   }, []);
 
   // Word cloud data
@@ -64,8 +67,7 @@ const Index = () => {
       <Header />
       <Hero />
       
-      {/* Imagination Section */}
-      <section id="imagination">
+      <section id="imagination" className="section-visible">
         <ThemeSection
           title="Imagination"
           subtitle="The Power of"
@@ -81,8 +83,7 @@ const Index = () => {
         </ThemeSection>
       </section>
       
-      {/* Education Section */}
-      <section id="education">
+      <section id="education" className="section-visible">
         <ThemeSection
           title="Education"
           subtitle="Words for"
@@ -99,8 +100,7 @@ const Index = () => {
         </ThemeSection>
       </section>
       
-      {/* Language Section */}
-      <section id="language">
+      <section id="language" className="section-visible">
         <ThemeSection
           title="Language"
           subtitle="Voices for"
@@ -116,8 +116,7 @@ const Index = () => {
         </ThemeSection>
       </section>
       
-      {/* Justice Section */}
-      <section id="justice">
+      <section id="justice" className="section-visible">
         <ThemeSection
           title="Justice & Fairness"
           subtitle="The Foundation of"
@@ -134,13 +133,11 @@ const Index = () => {
         </ThemeSection>
       </section>
       
-      {/* Shakespeare Influence Section */}
-      <section id="shakespeare">
+      <section id="shakespeare" className="section-visible">
         <ShakespeareInfluence />
       </section>
 
-      {/* UN Global Goals Section */}
-      <section id="goals">
+      <section id="goals" className="section-visible">
         <UnGoals />
       </section>
       
