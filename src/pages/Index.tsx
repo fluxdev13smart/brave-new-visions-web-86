@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
@@ -62,7 +61,6 @@ const Index = () => {
   return (
     <div className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
       <Header />
-      
       <Hero />
       
       {/* Imagination Section */}
@@ -70,7 +68,7 @@ const Index = () => {
         <ThemeSection
           title="Imagination"
           subtitle="The Power of"
-          description="Imagination is the doorway to new worlds. It allows us to envision what does not yet exist and bring it into being through creativity and innovation."
+          description="Every great movement begins with a spark of imagination. Brave new worlds aren't found—they're built. Through books, stories, and dreams, we shape the future before it happens. Education is not just learning facts. It's learning to see what isn't there yet. In this space, imagination is not fantasy—it is the beginning of justice."
           color="text-theme-imagination"
           gradientClass="gradient-imagination"
           number="01"
@@ -86,13 +84,13 @@ const Index = () => {
       <section id="education">
         <ThemeSection
           title="Education"
-          subtitle="The Foundation of"
-          description="Education empowers us to build brave new worlds by providing the knowledge, skills, and critical thinking necessary for transformation and progress."
+          subtitle="Words for"
+          description="Words can teach, heal, and open minds. Shakespeare's plays showed how words reveal truth and expose injustice. Today, our words still hold that power. Through speech, poetry, protest, and conversation, we create understanding. Wisdom doesn't live in silence—it lives in stories, questions, and shared ideas. Here, we celebrate language as the tool of the wise."
           color="text-theme-education"
           gradientClass="gradient-education"
           number="02"
-          quote="Education is the most powerful weapon which you can use to change the world."
-          quoteAuthor="Nelson Mandela"
+          quote="Education is not just learning facts. It's learning to see what isn't there yet."
+          quoteAuthor="Anonymous"
           className="bg-gray-50 dark:bg-gray-800"
           shapeColor="theme-education"
         >
@@ -104,8 +102,8 @@ const Index = () => {
       <section id="language">
         <ThemeSection
           title="Language"
-          subtitle="The Bridge to"
-          description="Language shapes thought and enables understanding. It is the tool through which we articulate our visions and communicate our ideas for brave new worlds."
+          subtitle="Voices for"
+          description="Justice begins when someone speaks up. From ancient speeches to modern movements, voices have always changed the world. Every person deserves to be heard, no matter their background, language, or beliefs. Communication isn't just about talking—it's about fairness. It's about building a world where everyone has a voice, and every voice has value."
           color="text-gray-700"
           gradientClass=""
           number="03"
@@ -122,7 +120,7 @@ const Index = () => {
         <ThemeSection
           title="Justice & Fairness"
           subtitle="The Foundation of"
-          description="True brave new worlds must be built on the foundations of justice and fairness, ensuring that all voices are heard and all people are treated with dignity and respect."
+          description="The world needs more open minds. That's why education is a right, not a privilege. Goal 4 of the United Nations Sustainable Development Goals calls for quality education for all. That means books, teachers, support, and safe schools for every child, everywhere. It means hope. And it means action."
           color="text-theme-justice"
           gradientClass="gradient-justice"
           number="04"
