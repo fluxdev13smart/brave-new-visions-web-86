@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import { Header } from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -67,7 +68,7 @@ const Index = () => {
       <Header />
       <Hero />
       
-      <section id="imagination" className="section-visible">
+      <section id="imagination" className="opacity-100 section-visible">
         <ThemeSection
           title="Imagination"
           subtitle="The Power of"
@@ -83,7 +84,7 @@ const Index = () => {
         </ThemeSection>
       </section>
       
-      <section id="education" className="section-visible">
+      <section id="education" className="opacity-100 section-visible">
         <ThemeSection
           title="Education"
           subtitle="Words for"
@@ -100,7 +101,7 @@ const Index = () => {
         </ThemeSection>
       </section>
       
-      <section id="language" className="section-visible">
+      <section id="language" className="opacity-100 section-visible">
         <ThemeSection
           title="Language"
           subtitle="Voices for"
@@ -116,7 +117,7 @@ const Index = () => {
         </ThemeSection>
       </section>
       
-      <section id="justice" className="section-visible">
+      <section id="justice" className="opacity-100 section-visible">
         <ThemeSection
           title="Justice & Fairness"
           subtitle="The Foundation of"
@@ -133,11 +134,11 @@ const Index = () => {
         </ThemeSection>
       </section>
       
-      <section id="shakespeare" className="section-visible">
+      <section id="shakespeare" className="opacity-100 section-visible">
         <ShakespeareInfluence />
       </section>
 
-      <section id="goals" className="section-visible">
+      <section id="goals" className="opacity-100 section-visible">
         <UnGoals />
       </section>
       
