@@ -1,6 +1,7 @@
+
 import React, { useEffect } from "react";
 import { Header } from "@/components/Header";
-import { Hero } from "@/components/Hero";
+import Hero from "@/components/Hero"; // Changed from { Hero } to Hero
 import { ThemeSection } from "@/components/ThemeSection";
 import { UnGoals } from "@/components/UnGoals";
 import { WordCloud } from "@/components/WordCloud";
